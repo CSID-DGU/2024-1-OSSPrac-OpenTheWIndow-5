@@ -1,0 +1,15 @@
+# docker-compose.yml
+
+version: "3.0"            # docker compose 파일의 버전
+
+services:                 # 서비스 정의  
+   frontapp:              # service의 명칭  
+      # 서비스 빌드를 위한 정의 내용
+      build: /FrontEnd   # dockerfile이 있는 위치
+      image: leecheolwoo/frontapp:latest # 해당이름으로 지정하여 빌드
+      ports: 
+         - "80:80"        # 포트번호 지정
+
+   backapp:               # service2의 명칭  
+      # 서비스 빌드를 위한 정의 내용
+      build: /BackEnd    # dockerfile이 있는 위치
