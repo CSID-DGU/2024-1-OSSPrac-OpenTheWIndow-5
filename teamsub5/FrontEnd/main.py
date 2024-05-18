@@ -15,9 +15,7 @@ def result():
        result['University'] = request.form.get('University')
        result['Gender'] = request.form.get('gender')
        result['Major'] = request.form.get('major')
-       email_id = request.form.get('email_id')
-       email_domain = request.form.get('email_domain')
-       result['Email'] = f"{email_id}@{email_domain}"
+       result['Email']='@'.join(request.form.getlist('email'))
        result['Languages'] = ', '.join(request.form.getlist('languages'))
        
        return render_template('result.html',result=result)
