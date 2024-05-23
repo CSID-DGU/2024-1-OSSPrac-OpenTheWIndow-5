@@ -13,3 +13,4 @@ services:                 # 서비스 정의
    backapp:               # service2의 명칭  
       # 서비스 빌드를 위한 정의 내용
       build: ./BackEnd    # dockerfile이 있는 위치
+      image: leecheolwoo/backapp:latest
